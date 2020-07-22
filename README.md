@@ -6,8 +6,7 @@ shizy Java test
 
 #### 1、打包成可直接运行的jar包
 
-**Maven打包(包含jar包内容)**
-  
+* Maven打包(包含jar包内容)
 ```
 mvn clean compile assembly:single
 ```
