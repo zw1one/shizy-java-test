@@ -1,6 +1,6 @@
-package com.shizy.game.fight.menu;
+package com.shizy.happy.fight.menu;
 
-import com.shizy.game.fight.role.RoleBase;
+import com.shizy.happy.fight.role.RoleBase;
 
 import java.util.ArrayList;
 import java.util.List;

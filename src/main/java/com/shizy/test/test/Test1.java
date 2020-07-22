@@ -1,4 +1,4 @@
-package com.shizy.test;
+package com.shizy.test.test;
 
 import org.junit.Test;
 

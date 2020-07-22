@@ -1,4 +1,4 @@
-package com.shizy.utils;
+package com.shizy.utils.format;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;

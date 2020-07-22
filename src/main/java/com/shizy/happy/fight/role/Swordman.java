@@ -1,4 +1,4 @@
-package com.shizy.game.fight.role;
+package com.shizy.happy.fight.role;
 
 public class Swordman extends RoleBase{
 

@@ -1,10 +1,10 @@
-package com.shizy.game.fight;
+package com.shizy.happy.fight;
 
-import com.shizy.game.fight.menu.FightInfo;
-import com.shizy.game.fight.menu.FightMenu;
-import com.shizy.game.fight.role.Goblin;
-import com.shizy.game.fight.role.RoleBase;
-import com.shizy.game.fight.role.Swordman;
+import com.shizy.happy.fight.menu.FightInfo;
+import com.shizy.happy.fight.menu.FightMenu;
+import com.shizy.happy.fight.role.Goblin;
+import com.shizy.happy.fight.role.RoleBase;
+import com.shizy.happy.fight.role.Swordman;
 
 import java.util.ArrayList;
 import java.util.List;

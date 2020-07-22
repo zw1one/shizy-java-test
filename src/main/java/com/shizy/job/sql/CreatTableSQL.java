@@ -1,6 +1,6 @@
 package com.shizy.job.sql;
 
-import com.shizy.utils.pinyin.PinyinUtil;
+import com.shizy.feature.pinyin.PinyinUtil;
 
 public class CreatTableSQL {
 

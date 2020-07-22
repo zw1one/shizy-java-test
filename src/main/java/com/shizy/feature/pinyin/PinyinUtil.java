@@ -1,4 +1,4 @@
-package com.shizy.utils.pinyin;
+package com.shizy.feature.pinyin;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
