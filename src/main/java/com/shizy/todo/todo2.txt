@@ -1,0 +1,81 @@
+复习资料整理
+
+
+
+
+2、设计模式六大原则 桥接代理和单例
+开闭原则 https://www.jianshu.com/p/d36da4f136c4
+设计模式六大原则 https://www.cnblogs.com/az4215/p/11489712.html
+常用设计模式
+https://mp.weixin.qq.com/s?__biz=MzI1NTI3MzEwMg==&mid=2247487186&idx=1&sn=a4542a87c3af5316a7de9430ef2750a1&chksm=ea393f33dd4eb6250c4d8a01a2c434ceb2f5c650f970616a9029dc5f90c04c2db8555abb9a22&mpshare=1&scene=1&srcid=0505i3iHBuv6nACzthMKebOa&sharer_sharetime=1595326061659&sharer_shareid=133f2a8f659fdc211cad7a34a0b3da17&key=3f40066d3eadc3b2733faa3e13c7ef386511c1e87ada2a2856f2aad43dc89b57037c8dac4a42a2eafe6c343c07543c9b53c3c487e3a99c2a24f852519be71db3e427dfb856f43665edf539b3788d2de6&ascene=1&uin=MTY0NjAzMDExMA%3D%3D&devicetype=Windows+10+x64&version=62090529&lang=zh_CN&exportkey=A9uHjyVHlLdNxEUf45JKeMA%3D&pass_ticket=RVjUcpZJjzDCAUyyuIBi3Eu6zc4VZOhdeT0pdtH%2FegFuWedijEitXrykc%2B9Qe4R4
+
+3、Java线程池解析
+https://juejin.im/post/5d1882b1f265da1ba84aa676
+多线程 乐观锁悲观锁  concurrent包下的内容
+
+4、自己不会的常见问题
+mybatis分页原理
+接口和抽象类有什么区别
+1、说下spring事务，@Transition 这个注解在哪些情况下不会生效
+2、Synchronized 基本原理
+3、Synchronized和ReentrantLock 都是可重入锁，他们俩是怎么实现可重入的
+4、线程池的工作原理和7个参数
+5、Volatile的 用处
+6、JVM在什么情祝下会发生YoungGc和FullGC
+7、Redis的淘汰机制
+8、类加载机制说一下
+9、快速排序的基本实现
+10、Mysql优化是怎么优化的，索引失效的情况都有哪些
+11、实现一个抢红包的算法，怎么实现
+12、让你实现- -个LRU算法，怎么实现.
+
+
+5、springboot、springcloud全家桶
+微服务 mq   分布式事务  生产者消费者模式
+
+6、数据库锁、索引、分布式、事务
+redis mysql
+
+7、JVM
+双亲委派、新生代 包在jar和工程都有咋办
+
+8、数据结构算法
+快排 红黑树 银行家算法 动态规划
+
+9、体系化复习资料
+
+
+
+
+
+
+
+
+待看的链接
+
+99道Java多线程
+https://www.jianshu.com/p/3e88a5fe75f0
+
+MySQL千万级别大表，你要如何优化？
+https://www.jianshu.com/p/1bf3196ad1ac
+
+学习Nginx
+https://www.jianshu.com/p/215600b11413
+
+创建多少个线程合适
+https://www.jianshu.com/p/f30ee2346f9f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
