@@ -49,9 +49,9 @@ public class QueryData {
         }
         result.sort(Comparator.comparing(o -> o.get(0).get("TABLE_NAME")));
 
-        //debug用 有的表有特殊字符 word打开会报错
+//        //debug用 有的表有特殊字符 word打开会报错
 //        List<List<Map<String, String>>> result2 = new ArrayList<>();
-//        for (int i = 78; i < 79; i++) {
+//        for (int i = 46; i < 47; i++) {
 //            result2.add(result.get(i));
 //        }
 //        result = result2;
@@ -64,6 +64,8 @@ public class QueryData {
                 "jdbc:oracle:thin:@192.168.37.12:1521:orcl",
                 "ly_cb",
                 "ly_cb");
+//                "herm",
+//                "herm");
 
         String sql = FileContentUtils.readFileContent(new File("src/main/java/com/shizy/job/gen/docx/sql/sql.txt"));
         return jdbcService.query(sql);

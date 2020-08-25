@@ -25,7 +25,10 @@ public class TableBase {
     public String toString() {
         if (comments == null) {
             throw new RuntimeException("表[" + tableName + "]没有表注释");
+        } else if (comments.equals(tableName)) {
+            System.out.println("表[" + tableName + "]没有表注释");
         }
+
         return base.replace("${tr_base}", content)
                 .replace("${tableName}", tableName)
                 .replace("${comments}", comments);

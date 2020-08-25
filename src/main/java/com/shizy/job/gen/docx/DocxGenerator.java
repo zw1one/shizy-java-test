@@ -88,7 +88,7 @@ public class DocxGenerator {
 
             Map listRecodeMap = new HashMap();
             listRecodeMap.put("list", listRecode);
-            listRecodeMap.put("comments", list.get(0).get("TABLE_COMMENTS"));
+            listRecodeMap.put("comments", escapeSymbol(list.get(0).get("TABLE_COMMENTS")));
             listRecodeMap.put("tableName", list.get(0).get("TABLE_NAME"));
 
             result.add(listRecodeMap);
@@ -109,8 +109,21 @@ public class DocxGenerator {
     }
 
     private String escapeSymbol(String value) {
-        return value.replace("&", "&amp;");
+        return value.replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("'", "&apos;")
+                .replace("\"", "&quot;");
     }
+
+    /**
+     * 用法：
+     * 1、修改数据库连接 见 queryDataBase()
+     * 2、运行main 输出结果见outputPath
+     * 3、将输出的zzz.xml 在word文档中，选择"文件"-"打开"，然后选zzz.xml 就可以打开了
+     * 3-1、xml打不开，则使用getDataList() - debug用 来测试 （注释中有奇怪的符号，会被识别为xml标签 导致打不开 见escapeSymbol()）
+     * 4、将内容复制到需要的word，或者新建一个word来放。因为毕竟是xml格式用word直接打开不方便
+     */
 
     public static void main(String[] args) {
         new DocxGenerator().genDocx();
