@@ -1,6 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
-ShizyJavaTest.iml
+shizy-java-test.iml
 target/
 /error.log
 /log.log

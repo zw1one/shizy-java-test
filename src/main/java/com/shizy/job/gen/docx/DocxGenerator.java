@@ -4,7 +4,7 @@ import com.shizy.job.gen.docx.po.TableBase;
 import com.shizy.job.gen.docx.po.TcBase;
 import com.shizy.job.gen.docx.po.TrBase;
 import com.shizy.job.gen.docx.po.WordBase;
-import com.shizy.job.gen.docx.util.FileContentUtils;
+import com.shizy.utils.properties.FileContentUtils;
 
 import java.io.File;
 import java.util.ArrayList;

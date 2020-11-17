@@ -1,7 +1,7 @@
 package com.shizy.job.gen.docx;
 
-import com.shizy.job.gen.docx.util.FileContentUtils;
-import com.shizy.job.gen.docx.util.JdbcService;
+import com.shizy.utils.properties.FileContentUtils;
+import com.shizy.utils.jdbc.JdbcService;
 
 import java.io.File;
 import java.util.ArrayList;

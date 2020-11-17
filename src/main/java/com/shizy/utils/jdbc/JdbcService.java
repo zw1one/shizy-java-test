@@ -1,4 +1,4 @@
-package com.shizy.job.gen.docx.util;
+package com.shizy.utils.jdbc;
 
 import lombok.Data;
 

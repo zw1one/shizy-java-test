@@ -1,0 +1,15 @@
+select t2.account_no accountNo, 
+	t2.account_name accountName, 
+	t2.currency_code currencyCode, 
+	t2.currency_name currencyName, 
+	account_attr accountAttr, 
+	t1.balance_use balanceUse, 
+	t1.balance balance, 
+	t1.balance_frozen balanceFrozen, 
+	t1.product product, 
+	t2.unit_ou_name unitOuName, 
+	t2.unit_ou_code unitOuCode, 
+	t3.nature_name natureName, 
+	t3.use_name useName, 
+	t2.org_code orgCode 
+from dual;

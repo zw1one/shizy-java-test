@@ -1,4 +1,4 @@
-package com.shizy.job.gen.docx.util;
+package com.shizy.utils.properties;
 
 import java.io.*;
 

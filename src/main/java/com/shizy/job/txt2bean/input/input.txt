@@ -1,0 +1,14 @@
+t2.account_no                       账户
+t2.account_name                     账户名称
+t2.currency_code                    币种编码
+t2.currency_name                    币种名称
+account_attr 账户属性
+t1.balance_use                      可用余额
+t1.balance                          实际余额
+t1.balance_frozen                   冻结金额
+t1.product                          利息积数
+t2.unit_ou_name                     单位名称
+t2.unit_ou_code                     OU编码
+t3.nature_name                      账户性质
+t3.use_name                         账户用途
+t2.org_code							机构编码

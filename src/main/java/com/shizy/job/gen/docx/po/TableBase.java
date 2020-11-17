@@ -1,7 +1,7 @@
 package com.shizy.job.gen.docx.po;
 
 import com.shizy.job.gen.docx.DocxGenerator;
-import com.shizy.job.gen.docx.util.FileContentUtils;
+import com.shizy.utils.properties.FileContentUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
