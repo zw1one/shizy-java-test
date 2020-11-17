@@ -1,14 +1,20 @@
-t2.account_no                       账户
-t2.account_name                     账户名称
-t2.currency_code                    币种编码
-t2.currency_name                    币种名称
-account_attr 账户属性
-t1.balance_use                      可用余额
-t1.balance                          实际余额
-t1.balance_frozen                   冻结金额
-t1.product                          利息积数
-t2.unit_ou_name                     单位名称
-t2.unit_ou_code                     OU编码
-t3.nature_name                      账户性质
-t3.use_name                         账户用途
-t2.org_code							机构编码
+       t1.TRADE_NO                    交易编号
+       t2.UNIT_OU_CODE                OU编码
+       t2.UNIT_NAME                   单位名称
+       t2.ACCOUNT_NO                  账号
+       t2.ACCOUNT_NAME                账户名称
+       t3.NATURE_NAME                 账户性质
+       t2.currency_code               币种编码
+       t2.currency_name               币种名称
+       t1.UPPER_SOURCE_CODE           数据来源-编码
+       t1.UPPER_SOURCE_NAME           数据来源-名称
+       t1.AMOUNT                      交易金额
+       t1.CREATE_TIME                 记账日期
+       t1.WRITE_DATE                  记账日
+       t1.INTEREST_DATE               起息日
+	   t1.DIRECTION_CODE                   收付方向-编码
+       t1.DIRECTION_NAME  收付方向-名称
+       t1.LEFTOVER_AMOUNT             余额
+       t1.MEMO                        摘要
+       t1.MAKE_USER_NAME              制单人
+       t1.CHECK_USER_NAME             复核人

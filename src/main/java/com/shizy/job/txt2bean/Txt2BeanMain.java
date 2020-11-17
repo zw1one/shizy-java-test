@@ -15,9 +15,9 @@ import java.util.List;
  * @author by shizy19 shizy19@meicloud.com
  * @Date 2020/11/17 9:18
  */
-public class Txt2Bean {
+public class Txt2BeanMain {
 
-    private static final Logger logger = LoggerFactory.getLogger(Txt2Bean.class);
+    private static final Logger logger = LoggerFactory.getLogger(Txt2BeanMain.class);
 
     //工程中运行才读的到，打包后不能这么读
     private static String templatePath = "src/main/java/com/shizy/job/txt2bean/input/";
@@ -70,8 +70,9 @@ public class Txt2Bean {
     }
 
     private List<Txt2BeanDto> txt2BeanDto(String content) {
-        List<Txt2BeanDto> txt2BeanDtos = new ArrayList<>();
+        content = content.toLowerCase();
 
+        List<Txt2BeanDto> txt2BeanDtos = new ArrayList<>();
         for (String row : content.split("\r\n")) {
             String[] rowDetail = row.trim().split("\\s+");
             String column = rowDetail[0].trim();
@@ -99,7 +100,7 @@ public class Txt2Bean {
 
 
     public static void main(String[] args) {
-        new Txt2Bean().start();
+        new Txt2BeanMain().start();
     }
 
 

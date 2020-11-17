@@ -3,7 +3,22 @@ package com.shizy.job.txt2bean.output;
 public class DemoBean {
 
     /**
-    * 账户
+    * 交易编号
+    */
+    private String tradeNo;
+
+    /**
+    * ou编码
+    */
+    private String unitOuCode;
+
+    /**
+    * 单位名称
+    */
+    private String unitName;
+
+    /**
+    * 账号
     */
     private String accountNo;
 
@@ -11,6 +26,11 @@ public class DemoBean {
     * 账户名称
     */
     private String accountName;
+
+    /**
+    * 账户性质
+    */
+    private String natureName;
 
     /**
     * 币种编码
@@ -23,53 +43,63 @@ public class DemoBean {
     private String currencyName;
 
     /**
-    * 账户属性
+    * 数据来源-编码
     */
-    private String accountAttr;
+    private String upperSourceCode;
 
     /**
-    * 可用余额
+    * 数据来源-名称
     */
-    private String balanceUse;
+    private String upperSourceName;
 
     /**
-    * 实际余额
+    * 交易金额
     */
-    private String balance;
+    private String amount;
 
     /**
-    * 冻结金额
+    * 记账日期
     */
-    private String balanceFrozen;
+    private String createTime;
 
     /**
-    * 利息积数
+    * 记账日
     */
-    private String product;
+    private String writeDate;
 
     /**
-    * 单位名称
+    * 起息日
     */
-    private String unitOuName;
+    private String interestDate;
 
     /**
-    * OU编码
+    * 收付方向-编码
     */
-    private String unitOuCode;
+    private String directionCode;
 
     /**
-    * 账户性质
+    * 收付方向-名称
     */
-    private String natureName;
+    private String directionName;
 
     /**
-    * 账户用途
+    * 余额
     */
-    private String useName;
+    private String leftoverAmount;
 
     /**
-    * 机构编码
+    * 摘要
     */
-    private String orgCode;
+    private String memo;
+
+    /**
+    * 制单人
+    */
+    private String makeUserName;
+
+    /**
+    * 复核人
+    */
+    private String checkUserName;
 
 }
