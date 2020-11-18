@@ -19,9 +19,26 @@ public class Txt2BeanMain {
 
     private static final Logger logger = LoggerFactory.getLogger(Txt2BeanMain.class);
 
-    //工程中运行才读的到，打包后不能这么读
-    private static String templatePath = "src/main/java/com/shizy/job/txt2bean/input/";
-    private static String outputPath = "src/main/java/com/shizy/job/txt2bean/output/";
+    private String templatePath;
+
+    private String outputPath;
+
+    private boolean contentToLowerCase;
+
+    public Txt2BeanMain templatePath(String templatePath) {
+        this.templatePath = templatePath;
+        return this;
+    }
+
+    public Txt2BeanMain outputPath(String outputPath) {
+        this.outputPath = outputPath;
+        return this;
+    }
+
+    public Txt2BeanMain contentToLowerCase(boolean contentToLowerCase) {
+        this.contentToLowerCase = contentToLowerCase;
+        return this;
+    }
 
     public void start() {
         //读取文件内容
@@ -70,7 +87,7 @@ public class Txt2BeanMain {
     }
 
     private List<Txt2BeanDto> txt2BeanDto(String content) {
-        content = content.toLowerCase();
+        if (contentToLowerCase) content = content.toLowerCase();
 
         List<Txt2BeanDto> txt2BeanDtos = new ArrayList<>();
         for (String row : content.split("\r\n")) {
@@ -100,7 +117,11 @@ public class Txt2BeanMain {
 
 
     public static void main(String[] args) {
-        new Txt2BeanMain().start();
+        new Txt2BeanMain()
+                .templatePath("src/main/java/com/shizy/job/txt2bean/input/") //工程中运行才读的到，打包后不能这么读
+                .outputPath("src/main/java/com/shizy/job/txt2bean/output/")
+                .contentToLowerCase(false)
+                .start();
     }
 
 
