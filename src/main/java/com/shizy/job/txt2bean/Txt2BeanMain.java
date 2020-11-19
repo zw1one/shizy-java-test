@@ -120,7 +120,8 @@ public class Txt2BeanMain {
         new Txt2BeanMain()
                 .templatePath("src/main/java/com/shizy/job/txt2bean/input/") //工程中运行才读的到，打包后不能这么读
                 .outputPath("src/main/java/com/shizy/job/txt2bean/output/")
-                .contentToLowerCase(false)
+//                .contentToLowerCase(false)
+                .contentToLowerCase(true)
                 .start();
     }
 

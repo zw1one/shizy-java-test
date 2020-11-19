@@ -3,28 +3,93 @@ package com.shizy.job.txt2bean.output;
 public class DemoBean {
 
     /**
-    * 内部户账号
+    * 账户号
     */
-    private String payInAccountNo;
+    private String accountNo;
 
     /**
-    * 数据来源
+    * 账户名
     */
-    private String upperSourceCode;
+    private String accountName;
 
     /**
-    * 交易编号
+    * 币种编码
     */
-    private String tradeNo;
+    private String currencyCode;
 
     /**
-    * 记账日期从
+    * 币种名称
     */
-    private String writeDateFrom;
+    private String currencyName;
 
     /**
-    * 记账日期到
+    * 余额日期
     */
-    private String writeDateTo;
+    private String balanceDate;
+
+    /**
+    * 可用余额
+    */
+    private String balanceUse;
+
+    /**
+    * 实际金额
+    */
+    private String balance;
+
+    /**
+    * 冻结金额
+    */
+    private String balanceFrozen;
+
+    /**
+    * 利息积数
+    */
+    private String product;
+
+    /**
+    * 单位名称
+    */
+    private String unitName;
+
+    /**
+    * 账户性质编码
+    */
+    private String natureCode;
+
+    /**
+    * 账户性质名称
+    */
+    private String natureName;
+
+    /**
+    * ou编码
+    */
+    private String unitOuCode;
+
+    /**
+    * 账户属性编码
+    */
+    private String accountAttrCode;
+
+    /**
+    * 账户属性名称
+    */
+    private String accountAttrName;
+
+    /**
+    * 账户用途编码
+    */
+    private String accountSmallCode;
+
+    /**
+    * 账户用途名称
+    */
+    private String useName;
+
+    /**
+    * 所属机构
+    */
+    private String orgCode;
 
 }
