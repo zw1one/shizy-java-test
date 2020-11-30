@@ -3,16 +3,14 @@ package com.shizy.test.test;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Test1 {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
-
-
-        System.out.println();
-
+        SimpleDateFormat sf  = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sf.format(new Date("Fri Nov 20 00:00:00 CST 2020")));
     }
 
     @Test
