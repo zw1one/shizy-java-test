@@ -15,5 +15,9 @@ mvn clean compile assembly:single
   
 配置正确即可使用，例子见：`test/java/example`
 
-#### 2、todo
+#### 2、其他
+
+一些功能测试，或一些模板代码
+
+#### 3、todo
 
