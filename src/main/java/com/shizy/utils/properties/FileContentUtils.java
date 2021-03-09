@@ -8,6 +8,14 @@ import java.util.Objects;
 
 public class FileContentUtils {
 
+    /**
+     * main运行
+     * FileContentUtils.readFileContent(new File("src/main/java/com/shizy/job/gen/docx/template/tr_base.xml"));//填充${tc_base}
+     *
+     * tomcat运行
+     * FileContentUtils.readFileContent(new File(this.getClass().getResource("").getPath()+"zzz.txt"));//打包后可能没有txt文件，注意放到resource
+     *
+     */
     public static String readFileContent(File file) {
 
         if (!file.exists()) {
