@@ -20,7 +20,7 @@ public class TwoNumSum {
 
     public static void main(String[] args) {
         int[] a = new int[]{13, 21, 65, 49, 8, 7, 54, 6};
-        int target = 2811;
+        int target = 28;
 
         int[] result = twoNumSum(a, target);
         System.out.println(Arrays.toString(result));
