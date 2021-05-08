@@ -21,14 +21,12 @@ public class FilePathUtils {
     }
 
     /**
-     * 获取 当前工程 的绝对路径
+     * IDAE中运行：获取 当前工程 的绝对路径
+     * 服务器jar包运行：
+     * 服务器tomcat运行：
      */
     public static String getProjectPath() {
         return new File("").getAbsolutePath() + "/";
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getProjectPath());
     }
 }
 

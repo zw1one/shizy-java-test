@@ -1,5 +1,7 @@
 package com.shizy.deploy;
 
+import com.shizy.utils.properties.FilePathUtils;
+
 /**
  * DeployMain
  *
@@ -9,6 +11,6 @@ package com.shizy.deploy;
 public class DeployMain {
 
     public static void main(String[] args) {
-        System.out.println(111);
+        System.out.println(FilePathUtils.getProjectPath());
     }
 }
