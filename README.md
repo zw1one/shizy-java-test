@@ -1,11 +1,11 @@
 # ShizyJavaTest
 
-shizy Java test
+com.shizy Java test
 
 ## 工程结构
 
 ```
-- shizy-java-test
+- com.shizy-java-test
 |- algorithm    算法练习
 |- deploy       工程发布
 |- feature      java特性

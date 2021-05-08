@@ -1,4 +1,4 @@
 
-java -jar shizy-java-test.jar
+java -jar com.shizy-java-test.jar
 
 pause
