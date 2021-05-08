@@ -1,5 +1,6 @@
-package com.shizy.job.txt2sql;
+package com.shizy.job.ly.txt2sql;
 
+import com.shizy.utils.properties.FilePathUtils;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
@@ -20,16 +21,18 @@ import java.util.*;
 public class Txt2SqlUtil {
 
     public static void main(String[] args) {
-        final String inputFilePath = "input.txt";
-        genSql(inputFilePath);
+        String inputFilePath = FilePathUtils.getProjectPath() + "job/src/main/java/com/shizy/job/ly/txt2sql/input.txt";
+        String outputFilePath = FilePathUtils.getProjectPath() + "job/src/main/java/com/shizy/job/ly/txt2sql/output.sql";
+        genSql(inputFilePath, outputFilePath);
     }
 
     /**
      * 生成建表sql文件
+     *
      * @param inputFilePath txt文件路径
      */
-    public static void genSql(String inputFilePath) {
-        File file = new File("output.sql");
+    public static void genSql(String inputFilePath, String outputFilePath) {
+        File file = new File(outputFilePath);
         String content;
         if (file.exists()) {
             file.delete();

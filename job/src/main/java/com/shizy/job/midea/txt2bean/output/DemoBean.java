@@ -1,4 +1,4 @@
-package com.shizy.job.txt2bean.output;
+package com.com.shizy.job.midea.txt2bean.output;
 
 public class DemoBean {
 

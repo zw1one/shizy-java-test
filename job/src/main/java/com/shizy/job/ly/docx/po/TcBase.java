@@ -1,6 +1,6 @@
-package com.shizy.job.gen.docx.po;
+package com.shizy.job.ly.docx.po;
 
-import com.shizy.job.gen.docx.DocxGenerator;
+import com.shizy.job.ly.docx.DocxGenerator;
 import com.shizy.utils.properties.FileContentUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,16 +11,17 @@ import java.io.File;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrBase {
+public class TcBase {
+
     private String content;
 
     private static String base;
 
     static {
-        base = FileContentUtils.readFileContent(new File(DocxGenerator.templatePath + "tr_base.xml"));//填充${tc_base}
+        base = FileContentUtils.readFileContent(new File(DocxGenerator.templatePath + "tc_base.xml"));//填充${tc_value}
     }
 
     public String toString() {
-        return base.replace("${tc_base}", content);
+        return base.replace("${tc_value}", content);
     }
 }

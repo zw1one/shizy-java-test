@@ -11,30 +11,6 @@
 
     <artifactId>deploy</artifactId>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--================================plugins=================================-->
 
     <build>
@@ -54,7 +30,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.com.shizy.utils.test.properties.PropertiesUtilsTest</mainClass>
+                            <mainClass>com.shizy.deploy.DeployMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

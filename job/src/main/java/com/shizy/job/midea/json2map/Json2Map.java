@@ -1,4 +1,4 @@
-package com.shizy.job.json2map;
+package com.shizy.job.midea.json2map;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -21,7 +21,7 @@ public class Json2Map {
 
     public static void main(String[] args) {
 
-        String content = FileContentUtils.readFileContent(new File("src/main/java/com/com.shizy/job/json2map/input.txt"));
+        String content = FileContentUtils.readFileContent(new File("src/main/java/com/com/shizy/job/json2map/input.txt"));
 
         JSONObject input = JSON.parseObject(content);
         List data = (JSONArray) input.get("data");

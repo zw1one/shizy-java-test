@@ -1,4 +1,4 @@
-package com.shizy.job.txt2bean.dto;
+package com.shizy.job.midea.txt2bean.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

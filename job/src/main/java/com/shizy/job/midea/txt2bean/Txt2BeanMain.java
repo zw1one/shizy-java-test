@@ -1,7 +1,8 @@
-package com.shizy.job.txt2bean;
+package com.shizy.job.midea.txt2bean;
 
-import com.shizy.job.txt2bean.dto.Txt2BeanDto;
+import com.shizy.job.midea.txt2bean.dto.Txt2BeanDto;
 import com.shizy.utils.properties.FileContentUtils;
+import com.shizy.utils.properties.FilePathUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 根据查询sql生成对应的BO类
+ * <p>
  * Txt2Bean
  *
  * @author by shizy19 shizy19@meicloud.com
@@ -42,7 +45,7 @@ public class Txt2BeanMain {
 
     public void start() {
         //读取文件内容
-        String content = FileContentUtils.readFileContent(new File(templatePath + "input.txt"));
+        String content = FileContentUtils.readFileContent(new File(templatePath));
 
         //解析文件获得列对象
         List<Txt2BeanDto> txt2BeanDtoList = this.txt2BeanDto(content);
@@ -58,7 +61,7 @@ public class Txt2BeanMain {
         //todo 使用Velocity模板而不是String
 
         StringBuilder sb = new StringBuilder();
-        sb.append("package com.com.shizy.job.txt2bean.output;")
+        sb.append("package com.com.shizy.job.midea.txt2bean.output;")
                 .append("\r\n\r\n")
                 .append("public class DemoBean {")
                 .append("\r\n\r\n");
@@ -118,8 +121,8 @@ public class Txt2BeanMain {
 
     public static void main(String[] args) {
         new Txt2BeanMain()
-                .templatePath("src/main/java/com/com.shizy/job/txt2bean/input/") //工程中运行才读的到，打包后不能这么读
-                .outputPath("src/main/java/com/com.shizy/job/txt2bean/output/")
+                .templatePath(FilePathUtils.getProjectPath() + "job/src/main/java/com/shizy/job/midea/txt2bean/input/input.txt")
+                .outputPath(FilePathUtils.getProjectPath() + "job/src/main/java/com/shizy/job/midea/txt2bean/output/")
 //                .contentToLowerCase(false)
                 .contentToLowerCase(true)
                 .start();

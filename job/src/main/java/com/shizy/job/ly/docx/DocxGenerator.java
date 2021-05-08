@@ -1,9 +1,9 @@
-package com.shizy.job.gen.docx;
+package com.shizy.job.ly.docx;
 
-import com.shizy.job.gen.docx.po.TableBase;
-import com.shizy.job.gen.docx.po.TcBase;
-import com.shizy.job.gen.docx.po.TrBase;
-import com.shizy.job.gen.docx.po.WordBase;
+import com.shizy.job.ly.docx.po.TableBase;
+import com.shizy.job.ly.docx.po.TcBase;
+import com.shizy.job.ly.docx.po.TrBase;
+import com.shizy.job.ly.docx.po.WordBase;
 import com.shizy.utils.properties.FileContentUtils;
 
 import java.io.File;
@@ -12,13 +12,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 读取数据库表结构，按模板格式将数据库表信息生成到docx文档。
+ */
 public class DocxGenerator {
 
     //工程中运行才读的到，打包后不能这么读
-    public static String templatePath = "src/main/java/com/com.shizy/job/gen/docx/template/";
+    public static String templatePath = "src/main/java/com/com/shizy/job/gen/docx/template/";
 
     //工程中运行才写的到
-    public static String outputPath = "src/main/java/com/com.shizy/job/gen/docx/output/zzz.xml";
+    public static String outputPath = "src/main/java/com/com/shizy/job/gen/docx/output/zzz.xml";
 
     public void genDocx() {
 

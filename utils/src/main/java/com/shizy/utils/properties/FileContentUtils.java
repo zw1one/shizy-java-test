@@ -10,11 +10,10 @@ public class FileContentUtils {
 
     /**
      * main运行
-     * FileContentUtils.readFileContent(new File("src/main/java/com/com.shizy/job/gen/docx/template/tr_base.xml"));//填充${tc_base}
-     *
+     * FileContentUtils.readFileContent(new File("src/main/java/com/com/shizy/job/gen/docx/template/tr_base.xml"));//填充${tc_base}
+     * <p>
      * tomcat运行
      * FileContentUtils.readFileContent(new File(this.getClass().getResource("").getPath()+"zzz.txt"));//打包后可能没有txt文件，注意放到resource
-     *
      */
     public static String readFileContent(File file) {
 
@@ -49,6 +48,9 @@ public class FileContentUtils {
     public static void writeFile(File file, String content) {
         if (!file.exists()) {
             try {
+                if (!file.getParentFile().exists()) {
+                    file.getParentFile().mkdir();
+                }
                 file.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
