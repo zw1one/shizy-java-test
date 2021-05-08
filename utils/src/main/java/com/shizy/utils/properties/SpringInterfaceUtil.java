@@ -189,7 +189,7 @@ public class SpringInterfaceUtil {
 
             List<File> result = new ArrayList<>();
             for (String path : paths) {
-                List<File> result0 = FileContentUtils.searchFile(path, classSimpleName);
+                List<File> result0 = FileUtils.searchFileByKeyWord(path, classSimpleName);
                 if (result0.size() != 0) {
                     result.addAll(result0);
                 }
@@ -201,7 +201,7 @@ public class SpringInterfaceUtil {
                 throw new RuntimeException("文件路径[" + Arrays.toString(paths) + "]下，文件[" + classSimpleName + "]存在多个");
             }
 
-            classNameMap.put(className, FileContentUtils.readFileContent(result.get(0)));
+            classNameMap.put(className, FileUtils.readFileContent(result.get(0)));
         }
         return classNameMap;
     }
@@ -220,7 +220,7 @@ public class SpringInterfaceUtil {
                     .append("\r\n");
         }
 
-        FileContentUtils.writeFile(new File(outputFilePath), sb.toString());
+        FileUtils.writeFile(new File(outputFilePath), sb.toString());
     }
 
 }

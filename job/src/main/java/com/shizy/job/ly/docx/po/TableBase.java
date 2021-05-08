@@ -1,7 +1,7 @@
 package com.shizy.job.ly.docx.po;
 
 import com.shizy.job.ly.docx.DocxGenerator;
-import com.shizy.utils.properties.FileContentUtils;
+import com.shizy.utils.properties.FileUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +19,7 @@ public class TableBase {
     private static String base;
 
     static {
-        base = FileContentUtils.readFileContent(new File(DocxGenerator.templatePath + "table_base.xml"));//填充${tr_base}
+        base = FileUtils.readFileContent(new File(DocxGenerator.templatePath + "table_base.xml"));//填充${tr_base}
     }
 
     public String toString() {

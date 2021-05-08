@@ -1,7 +1,7 @@
 package com.shizy.job.midea.txt2bean;
 
 import com.shizy.job.midea.txt2bean.dto.Txt2BeanDto;
-import com.shizy.utils.properties.FileContentUtils;
+import com.shizy.utils.properties.FileUtils;
 import com.shizy.utils.properties.FilePathUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +45,7 @@ public class Txt2BeanMain {
 
     public void start() {
         //读取文件内容
-        String content = FileContentUtils.readFileContent(new File(templatePath));
+        String content = FileUtils.readFileContent(new File(templatePath));
 
         //解析文件获得列对象
         List<Txt2BeanDto> txt2BeanDtoList = this.txt2BeanDto(content);
@@ -75,7 +75,7 @@ public class Txt2BeanMain {
         sb.append("}");
 
         String content = sb.toString();
-        FileContentUtils.writeFile(new File(outputPath), content);
+        FileUtils.writeFile(new File(outputPath), content);
     }
 
     private void genSelect(List<Txt2BeanDto> txt2BeanDtoList, String outputPath) {
@@ -86,7 +86,7 @@ public class Txt2BeanMain {
         }
 
         String select = sb.substring(0, sb.lastIndexOf(", ")) + " \r\nfrom dual;";
-        FileContentUtils.writeFile(new File(outputPath), select);
+        FileUtils.writeFile(new File(outputPath), select);
     }
 
     private List<Txt2BeanDto> txt2BeanDto(String content) {

@@ -1,7 +1,7 @@
 package com.shizy.job.ly.docx.po;
 
 import com.shizy.job.ly.docx.DocxGenerator;
-import com.shizy.utils.properties.FileContentUtils;
+import com.shizy.utils.properties.FileUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +18,7 @@ public class TcBase {
     private static String base;
 
     static {
-        base = FileContentUtils.readFileContent(new File(DocxGenerator.templatePath + "tc_base.xml"));//填充${tc_value}
+        base = FileUtils.readFileContent(new File(DocxGenerator.templatePath + "tc_base.xml"));//填充${tc_value}
     }
 
     public String toString() {

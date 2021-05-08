@@ -1,6 +1,6 @@
 package com.shizy.job.ly.docx;
 
-import com.shizy.utils.properties.FileContentUtils;
+import com.shizy.utils.properties.FileUtils;
 import com.shizy.utils.jdbc.JdbcService;
 
 import java.io.File;
@@ -67,7 +67,7 @@ public class QueryData {
 //                "herm",
 //                "herm");
 
-        String sql = FileContentUtils.readFileContent(new File("src/main/java/com/com/shizy/job/gen/docx/sql/sql.txt"));
+        String sql = FileUtils.readFileContent(new File("src/main/java/com/com/shizy/job/gen/docx/sql/sql.txt"));
         return jdbcService.query(sql);
     }
 
