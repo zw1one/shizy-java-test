@@ -12,7 +12,6 @@
     <modules>
         <module>algorithm</module>
         <module>deploy</module>
-        <module>deploy</module>
         <module>feature</module>
         <module>fun</module>
         <module>job</module>
