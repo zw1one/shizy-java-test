@@ -54,7 +54,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.com.shizy.test.deploy.DeployMain</mainClass>
+                            <mainClass>com.com.shizy.utils.test.properties.PropertiesUtilsTest</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

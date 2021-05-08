@@ -1,4 +1,4 @@
-package com.shizy.test.deploy;
+package com.shizy.utils.test.properties;
 
 import com.shizy.utils.properties.PropertiesUtils;
 import org.slf4j.Logger;
@@ -6,9 +6,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class DeployMain {
+public class PropertiesUtilsTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(DeployMain.class);
+    private static final Logger logger = LoggerFactory.getLogger(PropertiesUtilsTest.class);
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-# ShizyJavaTest
+# shizy-java-test
 
 com.shizy Java test
 
