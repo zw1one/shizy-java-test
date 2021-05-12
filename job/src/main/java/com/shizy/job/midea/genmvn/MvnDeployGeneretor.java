@@ -2,7 +2,7 @@ package com.shizy.job.midea.genmvn;
 
 import com.shizy.job.midea.genmvn.pojo.Dependency;
 import com.shizy.utils.bean.BeanUtil;
-import com.shizy.utils.properties.FileUtils;
+import com.shizy.utils.file.FileUtils;
 import lombok.AllArgsConstructor;
 
 import java.io.File;
@@ -133,7 +133,7 @@ public class MvnDeployGeneretor {
         String artifactId = dependencyFile.getParentFile().getName(); //gfp.gfsm.service
 
         String groupId = dependencyFile.getParentFile().getParentFile().getAbsolutePath()
-                .substring(FileUtils.fileCheckAndCreate(this.repositoryFilePath).getAbsolutePath().length())
+                .substring(FileUtils.checkAndGetFile(this.repositoryFilePath).getAbsolutePath().length())
                 .replaceAll("\\\\", ".").substring(1); //com.midea.jr.gfp
 
         String file = new StringBuilder()

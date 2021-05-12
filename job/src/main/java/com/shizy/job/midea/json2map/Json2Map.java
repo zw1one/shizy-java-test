@@ -3,7 +3,7 @@ package com.shizy.job.midea.json2map;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.shizy.utils.properties.FileUtils;
+import com.shizy.utils.file.FileUtils;
 
 import java.io.File;
 import java.util.List;

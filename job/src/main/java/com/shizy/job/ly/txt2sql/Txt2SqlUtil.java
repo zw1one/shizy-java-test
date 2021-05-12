@@ -1,6 +1,6 @@
 package com.shizy.job.ly.txt2sql;
 
-import com.shizy.utils.properties.FilePathUtils;
+import com.shizy.utils.file.FilePathUtils;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;

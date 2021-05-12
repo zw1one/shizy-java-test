@@ -1,8 +1,8 @@
 package com.shizy.job.midea.txt2bean;
 
 import com.shizy.job.midea.txt2bean.dto.Txt2BeanDto;
-import com.shizy.utils.properties.FileUtils;
-import com.shizy.utils.properties.FilePathUtils;
+import com.shizy.utils.file.FileUtils;
+import com.shizy.utils.file.FilePathUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

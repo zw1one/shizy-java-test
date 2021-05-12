@@ -1,6 +1,6 @@
 package com.shizy.deploy;
 
-import com.shizy.utils.properties.FilePathUtils;
+import com.shizy.utils.file.FilePathUtils;
 
 /**
  * DeployMain

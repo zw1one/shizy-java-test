@@ -1,6 +1,6 @@
 package com.shizy.job.ly.docx;
 
-import com.shizy.utils.properties.FileUtils;
+import com.shizy.utils.file.FileUtils;
 import com.shizy.utils.jdbc.JdbcService;
 
 import java.io.File;

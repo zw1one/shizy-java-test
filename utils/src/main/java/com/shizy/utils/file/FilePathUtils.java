@@ -1,4 +1,4 @@
-package com.shizy.utils.properties;
+package com.shizy.utils.file;
 
 import java.io.File;
 import java.util.Objects;

@@ -4,7 +4,7 @@ import com.shizy.job.ly.docx.po.TableBase;
 import com.shizy.job.ly.docx.po.TcBase;
 import com.shizy.job.ly.docx.po.TrBase;
 import com.shizy.job.ly.docx.po.WordBase;
-import com.shizy.utils.properties.FileUtils;
+import com.shizy.utils.file.FileUtils;
 
 import java.io.File;
 import java.util.ArrayList;
