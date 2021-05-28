@@ -28,17 +28,19 @@ public class MvnDeployGeneretor {
         String repositoryFilePath = "E:\\Program Files\\apache-maven-3.6.3\\repository\\";
 
         String[] findFilePath = {
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\midea\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\ibm\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\artofsolving\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\oracle\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\baidu\\ueditor\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\deepoove\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\baidu\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\org\\json\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\org\\jasig\\cas\\client\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\io\\springfox\\",
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\io\\swagger\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\midea\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\ibm\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\artofsolving\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\oracle\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\baidu\\ueditor\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\deepoove\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\baidu\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\org\\json\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\org\\jasig\\cas\\client\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\io\\springfox\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\io\\swagger\\",
+
+                "E:\\Program Files\\apache-maven-3.6.3\\repository\\",
         };
 
         String outputPath = "D:\\MyData\\shizy19\\Desktop\\maven-deploy.bat";
@@ -91,7 +93,12 @@ public class MvnDeployGeneretor {
             // 按文件夹名称读取maven信息。因为有些包中没有maven-metadata.xml文件，但文件夹路径不会错
             Dependency dependency = new Dependency();
             dependency.setPackaging("jar");
+
             setDependencyInfo(dependencyFile, dependency);//set version, artifactId, groupId, file
+            if (dependency.getFile() == null) {
+                return;
+            }
+
             dependency.setDependencyPath(dependencyFile.getAbsolutePath());
             dependency.setUrl(this.url);
             dependency.setRepositoryId(this.repositoryId);
@@ -132,9 +139,20 @@ public class MvnDeployGeneretor {
         String version = dependencyFile.getName(); //0.0.2-SNAPSHOT
         String artifactId = dependencyFile.getParentFile().getName(); //gfp.gfsm.service
 
-        String groupId = dependencyFile.getParentFile().getParentFile().getAbsolutePath()
-                .substring(FileUtils.checkAndGetFile(this.repositoryFilePath).getAbsolutePath().length())
-                .replaceAll("\\\\", ".").substring(1); //com.midea.jr.gfp
+        String groupId = null;
+        try {
+            groupId = dependencyFile.getParentFile().getParentFile().getAbsolutePath()
+                    .substring(FileUtils.checkAndGetFile(this.repositoryFilePath).getAbsolutePath().length())
+                    .replaceAll("\\\\", ".").substring(1); //com.midea.jr.gfp
+        } catch (Exception e) {
+            // debug
+//            e.printStackTrace();
+//            dependency.setVersion("");
+//            dependency.setArtifactId("");
+//            dependency.setGroupId("");
+//            dependency.setFile("");
+            return;
+        }
 
         String file = new StringBuilder()
                 .append(dependencyFile.getAbsolutePath()).append("/").append(artifactId).append("-").append(version).append(".").append(dependency.getPackaging())
