@@ -39,6 +39,8 @@ public class ProxyTest {
      * <p>
      * - 被代理对象需要实现接口，并且只能调用接口中的方法
      * - 调用对象需要改成代理对象，代码需改动。spring框架中可以直接加代理是因为框架中预留了代理对象的执行代码
+     *
+     * 原理：动态创建了一个实现该接口的类，并实现了下面的方法
      */
     private FunInterface jdkProxyGetInstance(FunInterface funClass) {
         return (com.shizy.feature.proxy.FunInterface) Proxy.newProxyInstance(funClass.getClass().getClassLoader(), funClass.getClass().getInterfaces(), (proxy, method, args) -> {
@@ -54,6 +56,8 @@ public class ProxyTest {
      * <p>
      * - 被代理对象可以不实现接口，cglib创建一个子类进行代理
      * - 调用对象需要改成代理对象，代码需改动。spring框架中可以直接加代理是因为框架中预留了代理对象的执行代码
+     *
+     * 原理：动态创建了一个该类的子类，并实现了下面的方法
      */
     private FunClassNoInterface cglibGetInstance(FunInterface funClass) {
         Enhancer enhancer = new Enhancer();
