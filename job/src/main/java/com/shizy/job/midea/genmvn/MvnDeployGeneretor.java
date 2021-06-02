@@ -28,7 +28,7 @@ public class MvnDeployGeneretor {
         String repositoryFilePath = "E:\\Program Files\\apache-maven-3.6.3\\repository\\";
 
         String[] findFilePath = {
-//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\midea\\",
+                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\midea\\",
 //                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\ibm\\",
 //                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\artofsolving\\",
 //                "E:\\Program Files\\apache-maven-3.6.3\\repository\\com\\oracle\\",
@@ -40,7 +40,7 @@ public class MvnDeployGeneretor {
 //                "E:\\Program Files\\apache-maven-3.6.3\\repository\\io\\springfox\\",
 //                "E:\\Program Files\\apache-maven-3.6.3\\repository\\io\\swagger\\",
 
-                "E:\\Program Files\\apache-maven-3.6.3\\repository\\",
+//                "E:\\Program Files\\apache-maven-3.6.3\\repository\\",
         };
 
         String outputPath = "D:\\MyData\\shizy19\\Desktop\\maven-deploy.bat";
@@ -66,7 +66,9 @@ public class MvnDeployGeneretor {
         });
 
         // 3、遍历dependencyList，打印出mvn命令
-        printMvnCommand(dependencys);
+//        printMvnCommand(dependencys);
+
+        printReferenceJar(dependencys);
     }
 
     /**
@@ -186,6 +188,23 @@ public class MvnDeployGeneretor {
         content.append("pause");//dos窗口运行完成后不关闭
 
         FileUtils.writeFile(new File(outputPath), content.toString());
+    }
+
+    /**
+     * 打印设计的jar包，用于整理统计
+     */
+    private void printReferenceJar(List<List<Dependency>> dependencys) {
+        dependencys.forEach(dependencies -> {
+            dependencies.forEach(dependency -> {
+                if (!"jar".equals(dependency.getPackaging())) {
+                    return;
+                }
+                // /com/midea/mgp/mgp-client-registry/2.0.5/mgp-client-registry-2.0.5.jar
+                String file = dependency.getFile()
+                        .substring(FileUtils.checkAndGetFile(this.repositoryFilePath).getAbsolutePath().length());
+                System.out.println(dependency.getGroupId() + "\t" + dependency.getArtifactId() + "\t" + dependency.getVersion() + "\t" + file);
+            });
+        });
     }
 }
 
